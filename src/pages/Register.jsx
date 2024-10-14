@@ -39,7 +39,7 @@ const Register = () => {
 		}
 
 		try {
-			let response = await axios.post("http://localhost:8000/api/user/", {
+			let response = await axios.post("https://elevateme-render.onrender.com/api/user/", {
 				...userData,
 			});
 
