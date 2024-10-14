@@ -83,14 +83,14 @@ const Report = () => {
 			let token = localStorage.getItem("token");
 			if (venn.field3 === "") {
 				response = await axios.get(
-					`http://localhost:8000/api/two_venn_ps/${ps_id}/`,
+					`https://elevateme-render.onrender.com/api/two_venn_ps/${ps_id}/`,
 					{
 						headers: { Authorization: `Token ${token}` },
 					}
 				);
 			} else {
 				response = await axios.get(
-					`http://localhost:8000/api/three_venn_ps/${ps_id}/`,
+					`https://elevateme-render.onrender.com/api/three_venn_ps/${ps_id}/`,
 					{
 						headers: { Authorization: `Token ${token}` },
 					}

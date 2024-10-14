@@ -66,7 +66,7 @@ const HMW = () => {
 		try {
 			let token = localStorage.getItem("token");
 			let response = await axios.post(
-				"http://localhost:8000/api/ai/five_hmws/",
+				"https://elevateme-render.onrender.com/api/ai/five_hmws/",
 				{
 					selected_statement: selected_statement,
 					list_of_whys: list_of_whys,

@@ -66,7 +66,7 @@ const Saved = () => {
 				let token = localStorage.getItem("token");
 
 				let response1 = await axios.get(
-					"http://localhost:8000/api/two_venn_ps/",
+					"https://elevateme-render.onrender.com/api/two_venn_ps/",
 					{
 						headers: { Authorization: `Token ${token}` },
 					}
@@ -77,7 +77,7 @@ const Saved = () => {
 				});
 
 				let response = await axios.get(
-					"http://localhost:8000/api/three_venn_ps/",
+					"https://elevateme-render.onrender.com/api/three_venn_ps/",
 					{
 						headers: { Authorization: `Token ${token}` },
 					}
@@ -110,7 +110,7 @@ const Saved = () => {
 		if (setting === 2) {
 			try {
 				let response = await axios.put(
-					`http://localhost:8000/api/two_venn_ps/${id}/`,
+					`https://elevateme-render.onrender.com/api/two_venn_ps/${id}/`,
 					{
 						statement: statement,
 					},
@@ -129,7 +129,7 @@ const Saved = () => {
 		} else if (setting === 3) {
 			try {
 				let response = await axios.put(
-					`http://localhost:8000/api/three_venn_ps/${id}/`,
+					`https://elevateme-render.onrender.com/api/three_venn_ps/${id}/`,
 					{
 						statement: statement,
 					},
@@ -155,7 +155,7 @@ const Saved = () => {
 		if (setting === 2) {
 			try {
 				let token = localStorage.getItem("token");
-				await axios.delete(`http://localhost:8000/api/two_venn_ps/${id}/`, {
+				await axios.delete(`https://elevateme-render.onrender.com/api/two_venn_ps/${id}/`, {
 					headers: { Authorization: `Token ${token}` },
 				});
 				dispatch({ type: "DELETE_TWO_VENN", id });
@@ -165,7 +165,7 @@ const Saved = () => {
 		} else if (setting === 3) {
 			try {
 				let token = localStorage.getItem("token");
-				await axios.delete(`http://localhost:8000/api/three_venn_ps/${id}/`, {
+				await axios.delete(`https://elevateme-render.onrender.com/api/three_venn_ps/${id}/`, {
 					headers: { Authorization: `Token ${token}` },
 				});
 				dispatch({ type: "DELETE_THREE_VENN", id });
