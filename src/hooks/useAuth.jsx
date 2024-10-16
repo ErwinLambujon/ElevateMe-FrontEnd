@@ -8,7 +8,7 @@ const useAuth = () => {
   const Login = async (user) => {
     try {
       let response = await axios.post(
-        "https://elevateme-render.onrender.com/api/user/login/",
+        "https://erwindoding.pythonanywhere.com/api/user/login/",
         {
           username: user.username,
           password: user.password,
