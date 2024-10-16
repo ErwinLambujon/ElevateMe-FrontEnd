@@ -34,7 +34,7 @@ const useAuth = () => {
       let token = localStorage.getItem("token");
 
       await axios.post(
-        "https://elevateme-render.onrender.com/api/user/logout/",
+        "https://erwindoding.pythonanywhere.com/api/user/logout/",
         {},
         {
           headers: { Authorization: `Token ${token}` },

@@ -179,7 +179,7 @@ const Ranking = () => {
 				if (selectedButton === 2) {
 					let token = localStorage.getItem("token");
 					let response = await axios.get(
-						`https://elevateme-render.onrender.com/api/two_venn_ps/`,
+						`https://erwindoding.pythonanywhere.com/api/two_venn_ps/`,
 						{
 							headers: { Authorization: `Token ${token}` },
 						}
@@ -192,7 +192,7 @@ const Ranking = () => {
 				} else if (selectedButton === 3) {
 					let token = localStorage.getItem("token");
 					let response = await axios.get(
-						`https://elevateme-render.onrender.com/api/three_venn_ps/`,
+						`https://erwindoding.pythonanywhere.com/api/three_venn_ps/`,
 						{
 							headers: { Authorization: `Token ${token}` },
 						}

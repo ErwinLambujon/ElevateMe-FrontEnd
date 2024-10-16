@@ -34,7 +34,7 @@ const FiveWhys = () => {
 		try {
 			let token = localStorage.getItem("token");
 			let response = await axios.post(
-				"https://elevateme-render.onrender.com/api/ai/five_whys/",
+				"https://erwindoding.pythonanywhere.com/api/ai/five_whys/",
 				{
 					ranked_problem: statement,
 				},
@@ -107,7 +107,7 @@ const FiveWhys = () => {
 		try {
 			let token = localStorage.getItem("token");
 			let response = await axios.post(
-				"https://elevateme-render.onrender.com/api/ai/potential_root/",
+				"https://erwindoding.pythonanywhere.com/api/ai/potential_root/",
 				{
 					selected_statement: statement,
 					list_of_whys: [...selectedWhys],

@@ -110,7 +110,7 @@ const Saved = () => {
 		if (setting === 2) {
 			try {
 				let response = await axios.put(
-					`https://elevateme-render.onrender.com/api/two_venn_ps/${id}/`,
+					`https://erwindoding.pythonanywhere.com/api/two_venn_ps/${id}/`,
 					{
 						statement: statement,
 					},
@@ -129,7 +129,7 @@ const Saved = () => {
 		} else if (setting === 3) {
 			try {
 				let response = await axios.put(
-					`https://elevateme-render.onrender.com/api/three_venn_ps/${id}/`,
+					`https://erwindoding.pythonanywhere.com/api/three_venn_ps/${id}/`,
 					{
 						statement: statement,
 					},
@@ -155,7 +155,7 @@ const Saved = () => {
 		if (setting === 2) {
 			try {
 				let token = localStorage.getItem("token");
-				await axios.delete(`https://elevateme-render.onrender.com/api/two_venn_ps/${id}/`, {
+				await axios.delete(`https://erwindoding.pythonanywhere.com/api/two_venn_ps/${id}/`, {
 					headers: { Authorization: `Token ${token}` },
 				});
 				dispatch({ type: "DELETE_TWO_VENN", id });
@@ -165,7 +165,7 @@ const Saved = () => {
 		} else if (setting === 3) {
 			try {
 				let token = localStorage.getItem("token");
-				await axios.delete(`https://elevateme-render.onrender.com/api/three_venn_ps/${id}/`, {
+				await axios.delete(`https://erwindoding.pythonanywhere.com/api/three_venn_ps/${id}/`, {
 					headers: { Authorization: `Token ${token}` },
 				});
 				dispatch({ type: "DELETE_THREE_VENN", id });

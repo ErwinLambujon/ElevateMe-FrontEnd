@@ -1,5 +1,4 @@
 import { Box, Button, Card, Grid, IconButton, Typography } from "@mui/material";
-
 import PSCard from "../components/PSCard";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Venn2 from "../res/venn2.png";
@@ -179,7 +178,7 @@ function Venn() {
 			setIsLoading((prev) => !prev);
 			let token = localStorage.getItem("token");
 			let response = await axios.post(
-				"https://elevateme-render.onrender.com/api/ai/two_venn/",
+				"https://erwindoding.pythonanywhere.com/api/ai/two_venn/",
 				{
 					...groupLabel,
 				},
@@ -210,7 +209,7 @@ function Venn() {
 				}
 				// alert("HERE");
 				let two_response = await axios.post(
-					"https://elevateme-render.onrender.com/api/ai/two_venn/",
+					"https://erwindoding.pythonanywhere.com/api/ai/two_venn/",
 					{
 						...textFields,
 					},
@@ -229,7 +228,7 @@ function Venn() {
 					return;
 				}
 				let three_response = await axios.post(
-					"https://elevateme-render.onrender.com/api/ai/three_venn/",
+					"https://erwindoding.pythonanywhere.com/api/ai/three_venn/",
 					{
 						...textFields,
 					},
@@ -261,7 +260,7 @@ function Venn() {
 		try {
 			if (selectedButton === 2) {
 				response = await axios.post(
-					"https://elevateme-render.onrender.com/api/two_venn_ps/",
+					"https://erwindoding.pythonanywhere.com/api/two_venn_ps/",
 					{
 						venn: { ...textFields },
 						statement: text,
@@ -274,7 +273,7 @@ function Venn() {
 				console.log(hasCheckedCheckBox);
 				if (hasCheckedCheckBox) {
 					response = await axios.post(
-						"https://elevateme-render.onrender.com/api/two_venn_ps/",
+						"https://erwindoding.pythonanywhere.com/api/two_venn_ps/",
 						{
 							venn: { ...groupLabel },
 							statement: text,
@@ -287,7 +286,7 @@ function Venn() {
 				} else {
 					alert("PASOK");
 					response = await axios.post(
-						"https://elevateme-render.onrender.com/api/three_venn_ps/",
+						"https://erwindoding.pythonanywhere.com/api/three_venn_ps/",
 						{
 							venn: { ...textFields },
 							statement: text,
